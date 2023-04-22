@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 	SetTargetFPS(60);
 
 
-	Image image = LoadImage("/home/diethyl/dvd.png");
+	Image image = LoadImage("dvd.png");
 	Texture2D texture = LoadTextureFromImage(image);
 	UnloadImage(image);
 	image = LoadImageFromTexture(texture);
@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
 	while(!WindowShouldClose()){
 		ClearBackground(BLACK);
 		while(1) {
-			if(initWidth >= screenWidth || initHeight >= screenHeight) {
-				while(initWidth!=0 || initHeight != 0) {
+			if(initWidth+texture.width >= screenWidth || initHeight+texture.height >= screenHeight) {
+				while(initWidth+texture.width!=0 || initHeight+texture.height != 0) {
 
 
 					initHeight--; 
