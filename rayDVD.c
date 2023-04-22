@@ -7,7 +7,6 @@ int main(int argc, char *argv[])
 	SetTargetFPS(60);
 
 
-
 	Image image = LoadImage("/home/diethyl/dvd.png");
 	Texture2D texture = LoadTextureFromImage(image);
 	UnloadImage(image);
@@ -20,19 +19,11 @@ int main(int argc, char *argv[])
 
 	SetExitKey(KEY_ESCAPE);
 
-	/*Camera camera = {
-	  .position = {0.0f, 0.0f, 0.0f},
-	  .target   = {0.0f, 0.0f, 1.0f},
-	  .up       = {0.0f, 1.0f, 0.0f},
-	  .fovy     = 70.0f
-	  };*/
-
 	int initWidth = screenWidth/2;
 	int initHeight = screenHeight/2;
 
 
-	while(!WindowShouldClose())
-	{
+	while(!WindowShouldClose()){
 		ClearBackground(BLACK);
 		while(1) {
 			if(initWidth >= screenWidth || initHeight >= screenHeight) {
