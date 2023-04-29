@@ -7,3 +7,6 @@ all:
 
 clean:
 	rm -rf ray
+
+dev:
+	$(COMP) $(CFLAGS) rayDVD.c def.c -o ray
