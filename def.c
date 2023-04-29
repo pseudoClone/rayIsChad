@@ -14,7 +14,7 @@ void bounce(Image image, Texture2D texture)
 	initWidth += (img_dx * img_vel);
 	initHeight += (img_dy * img_vel);
 
-	if(initWidth + texture.width > screenWidth) {
+	if(initWidth + (texture.width / 2) > screenWidth) {
 		initWidth = screenWidth - area / 2 * 1.2;
 		img_dx = -1;
 	}
@@ -27,7 +27,7 @@ void bounce(Image image, Texture2D texture)
 		initHeight = initHeight;
 		img_dy = 1;
 	}
-	else if(initHeight + texture.height > screenHeight) {
+	else if(initHeight + (texture.height / 2)  > screenHeight) {
 		initHeight = screenHeight - area / 2 * 1.2;
 		img_dy = -1;
 	
